@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-bg: #FEF5EF;
+    --main-color: '';
+}
+/* html{
+    font-size: 62.5%;
+}
+p{
+    font-size: 1.4rem;
+}
+.row{
+    margin: 0;
+
+} */
+body{
+    background-color: var(--main-bg);
+}
+.select_filter{
+    background-color: var(--main-bg);
+    border: none;
+    outline: none;
+    box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none; 
+  appearance: none; 
+}
+.select_filter:focus{
+    outline: none;
+}
+.select_filter:hover {
+    background-color: var(--main-bg);
+}
+.search_club{
+    text-align: center;
+    margin: 3rem 0rem 3rem 0rem;
+}
+#search_bar { 
+    width: 300px; 
+}
+.form-control_s:focus {
+    box-shadow: 0 0 0 0.2rem #E4BB97;
+    border: #E4BB97;
+}
+.form-control_s{
+    border: 1px solid #E4BB97;
+}
+@media (max-width: 457px) { 
+    #search_bar {
+        width: 90%;
+        max-width: 300px; 
+    }
+}
+
+.search_club button{
+    margin: 2rem 2rem 2rem 2rem;
+}
+.card_s img{
+    height: 8rem;
+    width: 8rem;
+    margin-top: 1rem;
+}
+.card_s{
+    margin: 1rem 0.5rem 1.5rem 0.5rem;
+    text-align: center;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.5);
+    /* rgba(0, 0, 0, 0.5) 0px 0px 10px 5px
+     */
+    
+}
+.card_s p{
+    margin: 2px 0 2px 0;
+}
+.card_s h6{
+    margin: 1.5rem 0 1rem 0;
+}
+.cbtn:hover{
+ background-color: rgb(90, 73, 83);
+}
+.cbtn{
+    background-color: rgb(157, 92, 100);
+}
+.card_s:hover{
+    margin: 0.5rem 0rem 0rem 0rem;
+    box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.75);
+    transition: 0.15s ease-in;
+}
