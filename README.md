@@ -156,7 +156,11 @@ Make sure you have the following installed:
 ---
 
 ## Contributors
-- **Meer Aakif** - ([http://localhost:3000](https://github.com/meer-aakif-33))
+- **Meer Aakif** - ([github](https://github.com/meer-aakif-33))
+- **Nawaz** - ([github](https://github.com/mrranger939))
+- **Zubair** - ([github](https://github.com/akheel-zubair))
+- **Rehaan** - ([github](https://github.com/Rehaan-345))
+
 
 If you’d like to contribute, feel free to submit a **pull request** or open an **issue**.
 
