@@ -1,5 +1,4 @@
-import("dotenv").then((dotenv) => dotenv.config());
-console.log(process.env);
+require('dotenv').config();
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
@@ -14,10 +13,10 @@ const nodemailer = require('nodemailer');
 
 /* Load API key */
 const apiKey = process.env.API_KEY;
-// if (!apiKey) {
-//     console.error("API_KEY is missing in the .env file");
-//     process.exit(1); // Stop the server if API_KEY is not set
-// }
+if (!apiKey) {
+    console.error("API_KEY is missing in the .env file");
+    process.exit(1); // Stop the server if API_KEY is not set
+}
 
 /* hasing functions */
 const argon2 = require('argon2');
@@ -59,7 +58,7 @@ const expressSession = session({
 const mongoose = require("mongoose");
 const { type } = require("os");
 
-const uri = 'mongodb://localhost:27017/cbit_placement_cell';
+const uri = process.env.MONGO_KEY;
 mongoose.connect(uri).then(()=>{
     console.log("connection successful with database")
 }).catch((error)=>{
