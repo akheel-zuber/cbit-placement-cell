@@ -140,7 +140,7 @@ Make sure you have the following installed:
 📁 cbit-placement-cell
 │-- 📁 public             # Static files (CSS, JS, images)
 │-- 📁 src
-|    │-- 📄 app.js             # Main Express application
+|    │--📄 app.js         # Main Express application
 │-- 📁 views              # web pages
 │-- 📄 package.json       # Dependencies and scripts
 ```
