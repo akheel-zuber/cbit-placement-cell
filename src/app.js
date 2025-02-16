@@ -1,4 +1,5 @@
-require("dotenv").config(); // Load environment variables
+import("dotenv").then((dotenv) => dotenv.config());
+console.log(process.env);
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
@@ -13,10 +14,10 @@ const nodemailer = require('nodemailer');
 
 /* Load API key */
 const apiKey = process.env.API_KEY;
-if (!apiKey) {
-    console.error("API_KEY is missing in the .env file");
-    process.exit(1); // Stop the server if API_KEY is not set
-}
+// if (!apiKey) {
+//     console.error("API_KEY is missing in the .env file");
+//     process.exit(1); // Stop the server if API_KEY is not set
+// }
 
 /* hasing functions */
 const argon2 = require('argon2');
