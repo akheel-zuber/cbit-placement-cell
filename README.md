@@ -36,7 +36,7 @@ The project is built using the **MERN stack** with additional dependencies such 
 
 ### **Frontend:**
 - EJS (Embedded JavaScript Templates)
-- HTML, CSS, Bootstrap
+- HTML, CSS, Bootstrap, JavaScript
 
 ### **Backend:**
 - Node.js
@@ -91,8 +91,12 @@ Make sure you have the following installed:
    ```sh
    mongod
    ```
+5. **Go to src directory:**
+   ```sh
+   cd src
+   ```
 
-5. **Run the application:**
+6. **Run the application:**
    ```sh
    npm start
    ```
@@ -101,7 +105,7 @@ Make sure you have the following installed:
    nodemon app.js
    ```
 
-6. **Visit in the browser:**
+7. **Visit in the browser:**
    - Open: [http://localhost:3000](http://localhost:3000)
 
 ---
@@ -140,25 +144,16 @@ Make sure you have the following installed:
 📁 cbit-placement-cell
 │-- 📁 public             # Static files (CSS, JS, images)
 │-- 📁 src
-|    │-- 📄 app.js             # Main Express application
+|    │--📄 app.js         # Main Express application
 │-- 📁 views              # web pages
 │-- 📄 package.json       # Dependencies and scripts
 ```
 
----
-
-## Future Enhancements
-- Implement **JWT-based authentication** for better security.
-- Integrate **resume upload feature** for students.
-- Add an **admin dashboard** for job and user management.
-- Enable **real-time notifications** for job postings.
-
----
 
 ## Contributors
 - **Meer Aakif** - ([github](https://github.com/meer-aakif-33))
 - **Nawaz** - ([github](https://github.com/mrranger939))
-- **Zubair** - ([github](https://github.com/akheel-zuber))
+- **Zuber** - ([github](https://github.com/akheel-zuber))
 - **Rehaan** - ([github](https://github.com/Rehaan-345))
 
 
