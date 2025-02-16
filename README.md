@@ -91,8 +91,12 @@ Make sure you have the following installed:
    ```sh
    mongod
    ```
+5. **Go to src directory:**
+   ```sh
+   cd src
+   ```
 
-5. **Run the application:**
+6. **Run the application:**
    ```sh
    npm start
    ```
@@ -101,7 +105,7 @@ Make sure you have the following installed:
    nodemon app.js
    ```
 
-6. **Visit in the browser:**
+7. **Visit in the browser:**
    - Open: [http://localhost:3000](http://localhost:3000)
 
 ---
