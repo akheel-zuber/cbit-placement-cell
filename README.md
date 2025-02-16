@@ -149,7 +149,7 @@ Make sure you have the following installed:
 ## Contributors
 - **Meer Aakif** - ([github](https://github.com/meer-aakif-33))
 - **Nawaz** - ([github](https://github.com/mrranger939))
-- **Zubair** - ([github](https://github.com/akheel-zuber))
+- **Zuber** - ([github](https://github.com/akheel-zuber))
 - **Rehaan** - ([github](https://github.com/Rehaan-345))
 
 
