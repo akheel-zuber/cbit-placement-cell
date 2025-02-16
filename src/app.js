@@ -1,3 +1,4 @@
+require("dotenv").config(); // Load environment variables
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
@@ -9,6 +10,13 @@ const temp_path = path.join(__dirname, "../views")
 const app = express();
 
 const nodemailer = require('nodemailer');
+
+/* Load API key */
+const apiKey = process.env.API_KEY;
+if (!apiKey) {
+    console.error("API_KEY is missing in the .env file");
+    process.exit(1); // Stop the server if API_KEY is not set
+}
 
 /* hasing functions */
 const argon2 = require('argon2');
@@ -37,7 +45,7 @@ async function verifyPassword(hashedPassword, plainPassword) {
 
 /* managing the sessions */
 const expressSession = session({
-    secret: 'iam inevitable',
+    secret: apiKey, // Use the API key as the secret
     resave: false,
     saveUninitialized: false,
     cookie: {maxAge:12000000}
