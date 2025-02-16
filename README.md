@@ -36,7 +36,7 @@ The project is built using the **MERN stack** with additional dependencies such 
 
 ### **Frontend:**
 - EJS (Embedded JavaScript Templates)
-- HTML, CSS, Bootstrap
+- HTML, CSS, Bootstrap, JavaScript
 
 ### **Backend:**
 - Node.js
@@ -145,15 +145,6 @@ Make sure you have the following installed:
 │-- 📄 package.json       # Dependencies and scripts
 ```
 
----
-
-## Future Enhancements
-- Implement **JWT-based authentication** for better security.
-- Integrate **resume upload feature** for students.
-- Add an **admin dashboard** for job and user management.
-- Enable **real-time notifications** for job postings.
-
----
 
 ## Contributors
 - **Meer Aakif** - ([github](https://github.com/meer-aakif-33))
