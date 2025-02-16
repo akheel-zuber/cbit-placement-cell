@@ -1,0 +1,224 @@
+<%- include("partials/header") -%>
+
+
+    <link rel="stylesheet" href="styling/home.css" />
+    <style>
+        .card-container-306 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card-306 {
+            margin: 5em;
+            padding: 5em;
+            background-color: #1c365b66;
+            border: 1px solid #0d72ff66;
+            color: #f5c338;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card-306 img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .card-content-306 {
+            padding: 20px;
+        }
+    </style>
+
+    </head>
+
+    <body>
+
+        <%- include("partials/navbar") -%>
+
+
+            <div class="card-container-306">
+
+                <div class="card-306">
+                    <h3>Company Wise</h3>
+                    <div class="card-content-306">
+                        <canvas id="company-wise-306"></canvas>
+                    </div>
+                </div>
+
+                <div class="card-306">
+                    <h3>Section Wise</h3>
+                    <div class="card-content-306">
+                        <canvas id="section-wise-306"></canvas>
+                    </div>
+                </div>
+
+                <div class="card-306">
+                    <h3>Job Wise</h3>
+                    <div class="card-content-306">
+                        <canvas id="job-wise-306"></canvas>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <%- include("partials/footer") -%>
+
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <script>
+
+                    Chart.defaults.color = 'rgb(74, 132, 213)';
+                    // const data = {
+                    //     labels: [
+                    //         'Microsoft',
+                    //         'Google',
+                    //         'Apple',
+                    //         'JP Morgan',
+                    //         'Salesforce'
+                    //     ],
+                    //     datasets: [{
+                    //         label: 'My First Dataset',
+                    //         data: [11, 16, 7, 3, 14],
+                    //         backgroundColor: [
+                    //             'rgb(255, 99, 132)',
+                    //             'rgb(75, 192, 192)',
+                    //             'rgb(255, 205, 86)',
+                    //             'rgb(201, 203, 207)',
+                    //             'rgb(54, 162, 235)'
+                    //         ]
+                    //     }]
+                    // };
+                    // const config = {
+                    //     type: 'polarArea',
+                    //     data: data,
+                    //     options: {
+                    //         responsive: true,
+                    //         scales: {
+                    //             r: {
+                    //                 pointLabels: {
+                    //                     display: true,
+                    //                     centerPointLabels: true,
+                    //                     color: '#f5c338',
+                    //                     font: {
+                    //                         size: 10
+                    //                     }
+                    //                 }
+                    //             }
+                    //         }
+                    //     }
+                    // };
+
+                    // new Chart(document.getElementById("company-wise-306"), config)
+
+
+                    function drawchart(chart_name, comp_names, dta) {
+                        const data = {
+                            labels: comp_names,
+                            datasets: [{
+                                data: dta,
+                                backgroundColor: [
+                                    'rgb(255, 99, 132)',
+                                    'rgb(75, 192, 192)',
+                                    'rgb(255, 205, 86)',
+                                    'rgb(201, 203, 207)',
+                                    'rgb(54, 162, 235)'
+                                ]
+                            }]
+                        };
+                        const config = {
+                            type: 'polarArea',
+                            data: data,
+                            options: {
+                                responsive: true,
+                                scales: {
+                                    r: {
+                                        pointLabels: {
+                                            display: true,
+                                            centerPointLabels: true,
+                                            color: '#f5c338',
+                                            font: {
+                                                size: 10
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        };
+                        new Chart(document.getElementById(chart_name), config)
+
+                    }
+
+
+                    const dbdata =  <%- JSON.stringify(rec) -%>;
+
+                    // COmpany WIse SHURU
+
+                    companies = new Set()
+                    recruits = []
+
+                    dbdata.forEach(element => {
+                        companies.add(element.companyName)
+                    });
+                    
+                    companies = Array.from(companies)
+                    companies.forEach(element => {
+                        recruits.push(dbdata.filter(s => {
+                            return s.companyName == element
+                        }).length)
+                    });
+
+
+                    // COmpany WIse KHATAM
+
+
+                    // Section WIse SHURU
+
+                    sections=new Set()
+                    srecruits = []
+
+                    dbdata.forEach(element => {
+                        sections.add(element.section)
+                    });
+
+                    sections = Array.from(sections)
+                    sections.forEach(element => {
+                        srecruits.push(dbdata.filter(s => {
+                            return s.section == element
+                        }).length)
+                    });
+
+                    // Section WIse KHATAM
+
+
+                    // JJob WIse SHURU
+
+                    jtype=new Set()
+                    jrecruits = []
+
+                    dbdata.forEach(element => {
+                        jtype.add(element.jobType)
+                    });
+
+                    jtype = Array.from(jtype)
+                    jtype.forEach(element => {
+                        jrecruits.push(dbdata.filter(s => {
+                            return s.jobType == element
+                        }).length)
+                    });
+
+                    // JJob WIse KHATAM
+
+
+
+                    drawchart("company-wise-306", companies, recruits)
+                    drawchart("section-wise-306", sections, srecruits)
+                    drawchart("job-wise-306", jtype, jrecruits)
+
+                </script>
+
+    </body>
+
+    </html>

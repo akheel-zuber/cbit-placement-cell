@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Logo</title>
+    <style>
+        body{
+            background-color: red;
+        }
+        body svg{
+            width: 200px; /* Desired width */
+    height: 100px; /* Desired height */
+    display: block; /* Centers SVG in some scenarios */
+    margin: 0 auto; /* Center horizontally */
+        }
+    </style>
+</head>
+<body>
+    <h1>Company Logo</h1>
+    <% if (logoSvg) { %>
+        <div><%= logoSvg %></div> <!-- Output the raw SVG HTML -->
+    <% } else { %>
+        <p>No logo available.</p>
+    <% } %>
+    <img src="https://api.kickfire.com/logo?website=flipkart.com" />
+</body>
+</html>

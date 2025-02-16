@@ -1,0 +1,219 @@
+body{
+    background-image: linear-gradient(
+    to left bottom,
+    #1a4c88,
+    #174074,
+    #143461,
+    #10294f,
+    #0b1e3d,
+    #091c3a,
+    #081936,
+    #061733,
+    #071c3c,
+    #072146,
+    #072750,
+    #062c5a
+  );
+}
+.banner {
+    position: relative;
+    background-image: url(../images/college-2.png);
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 450px;
+/*     margin-top: 65px; */
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: 3rem;
+}
+
+.banner-div {
+    background: rgba(2,0,36,.5);
+    border-radius: 20px;
+    width: 50%;
+    height: 80%;
+    padding: 20px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.banner-text {
+    font-size: 20px; 
+    line-height: 30px;
+    letter-spacing: .0022px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0,0,0,.55);
+    text-align: center; 
+   
+}
+
+.banner-head {
+    letter-spacing: .0022px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0,0,0,.55);
+    font-size: 42px;
+    line-height: 50px;
+    font-weight: bold; 
+    margin-bottom: 20px; 
+}
+
+
+.acad-div{
+    margin-top: 50px;
+
+}
+
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+
+.sect{
+    border: #fff;
+}
+
+.sect {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sect h2 {
+    margin-top: 0;
+    color: #337ab7;
+}
+
+.sect p {
+    margin-bottom: 10px;
+}
+
+
+.placement {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #607d8b;
+    margin-top: 1.5rem;
+    line-height: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    padding-top: 70px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.);
+    display: flex; /* Use flexbox to center align children */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align children horizontally */
+}
+
+.place-pdf {
+    padding: 0; /* Remove padding to avoid extra space */
+    margin: 0; /* Remove margin to avoid extra space */
+    list-style: none; /* Remove bullet points */
+}
+
+.broch {
+    display: flex;
+    align-items: center; /* Center align items */
+    gap: 10px;
+    margin-bottom: 10px; /* Add margin to separate items */
+}
+
+.broch a {
+    text-decoration: none;
+    color: #607d8b;
+}
+
+.broch-p{
+    color: #607d8b;
+}
+
+#director{
+    background-color: white;
+    margin-top: 70px;
+}
+
+.pri-pic{
+    height: 400px;
+}
+
+.msg{
+    font-size: 28px;
+    line-height: 39px;
+    letter-spacing: .0022px;
+    color: #607d8b;
+}
+
+.msg-h{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #7389ff;
+}
+@media (max-width: 768px) {
+    /* Stack sections vertically on smaller screens */
+    .section-academic .content,
+    .section-departments .content,
+    .section-placement .content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media(max-width:1050px){
+    .banner-text{
+        font-size: 17px;
+    }
+    .banner-head{
+        font-size: 23px;
+    }
+}
+@media(max-width:900px){
+    .banner-text{
+        font-size: 15px;
+    }
+    .banner-head{
+        font-size: 20px;
+    }
+}
+@media(max-width:700px){
+    .banner-text{
+        font-size: 10px;
+    }
+    .banner-head{
+        font-size: 15px;
+    }
+
+}
+@media(max-width:500px){
+    .banner-text{
+        font-size: 7px;
+    }
+    .banner-head{
+        font-size: 12px;
+    }
+    .placement p{
+        font-size: 15px;
+    }
+}
+@media(max-width:750px){
+    .placement p{
+        font-size: 20px;
+    }
+}
+@media(max-width:450px){
+    .placement p{
+        font-size: 10px;
+    }
+}

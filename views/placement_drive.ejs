@@ -1,0 +1,72 @@
+<%- include("partials/header") -%>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styling/home.css"/>
+    <link rel="stylesheet" href="styling/a-style.css">
+    <title>Availabe opportunities</title>
+</head>
+<body>
+    <%- include("partials/navbar") -%>
+    <div class="container">
+        <h1 class="text-center">Upcoming opportunities...</h1><br><br>
+        <% if(username === "admin") { %>
+            <center>
+                <a href="/oppurtunity_add"><button class="btn btn-primary">Add Opportunity</button></a>
+            </center><% } %>
+        
+        <div class="row row-cols-1 row-cols-md-4 g-5 py-5" id="companyCards">
+           
+            </div></div>
+            
+           
+    
+    <%- include("partials/footer") -%>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+    <script>
+        
+        const companyList = <%- JSON.stringify(companyList) %>;
+        
+        function addingcards(arr){
+            arr.forEach(element => {
+                if(element.status){
+
+                    addCard(element.companyName,element._id, element.availableVacancies , element.eligibility, element.jobType, element.companyDomain, element.role)
+                }
+                
+            });
+        }
+        function addCard(companyName,jobid, vacancies, eligibility, jobType, logoUrl, role) {
+            
+            const cardsContainer = document.getElementById('companyCards');
+
+            const cardHTML = `
+                <div class="col">
+                    <div class="card">
+                        <center>
+                            <div class="card_img_div">
+                                <img src="https://api.kickfire.com/logo?website=${logoUrl}" class="card-img-top" alt="...">
+                            </div>
+                        </center>
+                        <div class="card-body">
+                            <h5 class="card-title">${companyName}</h5>
+                            <h6>${role}</h6>
+                            <p class="card-vacancies">Available vacancies: <span class="vacancy-number">${vacancies}</span></p>
+                            <p class="card-eligibility">Eligibility: <span class="batch-year">${eligibility}</span> Passouts</p>
+                            <p class="card-job-type">Type: <span class="batch-year">${jobType}</span></p>
+                            <div class="d-flex justify-content-around">
+                                <a href='/placement_drive/${jobid}'><button class="btn btn-primary">Apply Here</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+
+            cardsContainer.innerHTML += cardHTML;
+        }
+        addingcards(companyList)
+    </script>
+
+</body>
+</html>

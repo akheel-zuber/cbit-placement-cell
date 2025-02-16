@@ -1,0 +1,344 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-bg: #040c1f;
+    --main-color: '';
+}
+/* html{
+    font-size: 62.5%;
+}
+p{
+    font-size: 1.4rem;
+}
+.row{
+    margin: 0;
+#66406e, #323f68
+
+} */
+body{
+   /*  background-color: var(--main-bg); */
+    background: linear-gradient(to left,rgb(5, 15, 40),rgb(5, 42, 86),rgb(7, 51, 105) );
+}
+.select_filter{
+    background-color: var(--main-bg);
+    border: none;
+    outline: none;
+    box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none; 
+  appearance: none; 
+}
+.select_filter:focus{
+    outline: none;
+}
+.select_filter:hover {
+    background-color: var(--main-bg);
+}
+.search_club{
+    text-align: center;
+    margin: 3rem 0rem 3rem 0rem;
+}
+#search_bar { 
+    width: 300px; 
+}
+.form-control_s:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+    /* border: #E4BB97; */
+    background: rgba(255, 255, 255, 0.178); /* Semi-transparent white background */
+    backdrop-filter: blur(5px); /* Blur effect for glassmorphism */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Light border for more glass effect */
+    color: white;
+    opacity: 0.5;
+}
+.form-control_s{
+    /* border: 1px solid #E4BB97; */
+    background: rgba(255, 255, 255, 0.178); /* Semi-transparent white background */
+    backdrop-filter: blur(5px); /* Blur effect for glassmorphism */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Light border for more glass effect */
+    color: white;
+    opacity: 0.5;
+}
+.form-control_s::placeholder{
+    color: aliceblue;
+    opacity: 0.5;
+}
+@media (max-width: 457px) { 
+    #search_bar {
+        width: 90%;
+        max-width: 300px; 
+    }
+}
+
+.search_club button{
+    margin: 2rem 2rem 2rem 2rem;
+}
+.card_s img{
+    max-height: 8rem;
+    max-width: 7rem;
+    width: 100%;
+
+  /*   margin-top: 3.5rem; */
+
+}
+.card_img_div{
+    background-color: white;
+    border-radius: 15px;
+    margin: 20px 20px 20px 20px;
+    opacity: 0.95;
+    height: 8rem;
+    width: 10rem;
+}
+.card_img_div {
+    display: flex;          /* Makes this a flex container */
+    justify-content: center;/* Centers content horizontally */
+    align-items: center;    /* Centers content vertically */
+ /*    height: 100%;  */          /* Optional: Set a specific height or make it full height */
+}
+
+/* .card_s{
+    margin: 1rem 0.5rem 1.5rem 0.5rem;
+    text-align: center;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.5);
+    
+    background-color: rgb(1, 155, 197);
+    
+     
+    
+} */
+/* .card-img-top svg{
+    height: 8rem;
+    width: 8rem;
+} */
+.card_s {
+    position: relative;
+    margin: 1rem 0.5rem 1.5rem 0.5rem;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    background: transparent; /* Make background transparent */
+    color: white;
+    z-index: 1;
+    width: 100%; /* Higher z-index to keep content above pseudo-element */
+    
+}
+
+.card_s::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.178); /* Semi-transparent white background */
+    backdrop-filter: blur(5px); /* Blur effect */
+    border-radius: 20px; /* Match parent's border-radius */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Light border for more glass effect */
+    z-index: -1; /* Below the content */
+}
+
+@media (min-width: 768px) {
+    .card_s::before {
+        backdrop-filter: blur(5px);
+    }
+}
+
+.card_s p{
+    margin: 2px 0 2px 0;
+    
+}
+.card_s h6{
+    margin: 1.5rem 0 1rem 0;
+    
+}
+.cbtn:hover{
+ /* background-color: rgb(90, 73, 83); */
+ background: linear-gradient(125deg, rgb(0, 109, 199) 60%, rgb(1, 155, 197) 95% , rgba(13, 172, 245, 0.089) 98% );
+ border: none;
+}
+
+.cbtn{
+    /* background-color: rgb(157, 92, 100); */
+    background: linear-gradient(125deg, rgb(1, 136, 250) 60%, rgb(1, 197, 250) 95% , rgb(108, 213, 255) 98% );
+    border: none;
+    border-radius: 8px;
+}
+.cbtn {
+    --bs-btn-bg: rgb(1, 136, 250);
+    --bs-btn-border-color: rgb(1, 136, 250);
+    --bs-btn-hover-bg: rgb(0, 109, 199);
+    --bs-btn-hover-border-color: rgb(0, 109, 199);
+    --bs-btn-active-bg: rgb(0, 109, 199);
+    --bs-btn-active-border-color: rgb(0, 109, 199);
+    background-color: var(--bs-btn-bg);
+    border-color: var(--bs-btn-border-color);
+  }
+  
+  /* .cbtn:hover {
+    background-color: var(--bs-btn-hover-bg);
+    border-color: var(--bs-btn-hover-border-color);
+  } */
+  
+  .cbtn:active {
+    background-color: var(--bs-btn-active-bg);
+    border-color: var(--bs-btn-active-border-color);
+  }
+  
+.card_s:hover{
+    margin: 0.5rem 0rem 0rem 0rem;
+    box-shadow: 5px 5px 5px 3px rgb(2, 80, 133);
+    transition: 0.15s ease-in;
+}
+
+/* Styles for sidebar */
+/* .sidebar {
+    position: fixed; 
+    top: 0;         
+    left: 0;        
+    width: 35%;      
+    height: 100%;    
+    background: rgba(0, 123, 255, 0.8);
+    color: white;    
+    padding: 20px;  
+    z-index: 1000;   
+    overflow-y: auto; 
+    transition: left 0.3s ease;
+}
+
+
+.sidebar.hidden {
+    left: -35%;  
+}
+
+
+body {
+    padding-left: 35%; 
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; 
+    }
+    body {
+        padding-left: 0; 
+    }
+    .sidebar.hidden {
+        left: -100%; 
+    }
+} */
+/* Styles for sidebar */
+.sidebar {
+    position: fixed; 
+    top: 100px;   
+         
+    left: -35%;     
+    width: 35%;      
+    height: 100%;   
+    /* background: rgb(214, 227, 248); */
+    background: linear-gradient(to left,rgb(5, 15, 40) 60%,rgb(5, 42, 86),rgb(7, 51, 105) );
+    color: white;   
+    padding: 20px;   
+    z-index: 1001;   
+    transition: left 0.3s ease;
+    opacity: 0.75;
+    overflow-y: auto ;
+    
+}
+
+.sidebar.visible {
+    left: 0; 
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        opacity: 0.8;
+        width: 100%; 
+        left: -100%; 
+    }
+    .sidebar.visible {
+        left: 0; 
+    }
+    /* .card_s{
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+    .card_s:hover{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    } */
+    
+}
+
+
+/* Styles for the thumb (the draggable circle) */
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Required to remove default styling */
+  appearance: none;
+  width: 20px; /* Set the size of the thumb */
+  height: 20px;
+  background: white; /* Green background */
+  cursor: pointer; /* Cursor changes to a pointer when hovered */
+  border-radius: 50%; /* Make it circular */
+}
+
+input[type='range']::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+input[type='range']::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* Styles for the track (the line the thumb slides along) */
+input[type='range']::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.658); /* Light grey background */
+  border-radius: 4px;
+}
+
+input[type='range']::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.658);;
+  border-radius: 4px;
+}
+
+input[type='range']::-ms-track {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.658);;
+  border-radius: 4px;
+  border-color: transparent; /* Remove border for IE */
+  color: transparent; /* Remove additional styling for IE */
+}
+
+/* Styles for the filled part of the track to the left of the thumb */
+input[type='range']::-webkit-slider-thumb {
+  background: white;
+}
+
+input[type='range']::-moz-range-progress {
+  background: white;
+  height: 8px;
+  border-radius: 4px;
+}
+
+input[type='range']::-ms-fill-lower {
+  background: white;
+  border-radius: 4px;
+}
+
+

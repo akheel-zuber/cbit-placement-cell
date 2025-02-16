@@ -1,0 +1,80 @@
+<%- include("partials/header") -%>
+<link rel="stylesheet" href="styling/home.css" />
+<link rel="stylesheet" href="styling/home_z.css">
+<title>Home</title>
+<style>
+    body{
+        color: black;
+    }
+</style>
+</head>
+<body>
+    <!-- ----------------   NAVBAR STARTS ------------------------------- -->
+  
+    <%- include("partials/navbar") -%>
+    <!-- ----------------   NAVBAR EMDS   ------------------------------- -->
+    <body>
+        <div class="banner">
+            <div class="banner-div">
+                <h1 class="banner-head">A one stop portal for Placements</h1>
+                <p class="banner-text">
+                    Welcome to the recruitment website For CBIT.
+                    <br>
+                    CBIT is India's foremost industrial leadership development institution. Our graduates are a combination of rigorous thinking, hardwork and fundamental stronghold. They are nurtured by the institute to strive for excellence and deliver impact in their field of work. Let us begin...</p>
+            </div>
+        </div>
+        <main class="acad-div row">
+            <main class="acad col-8">
+                <section id="academic-facilities" class="academic sect">
+                    <h2>Academic Facilities</h2>
+                    <p>CBIT provides the best learning facilities and the best possible learning environment. The programmes and courses on offer have the flexibility to evolve and change in response to new requirements. The programmes have a dual purpose of building a solid foundation of knowledge and, at the same time, enhancing confidence, creativity and innovation.</p>
+                    <button class="btn btn-primary">Know more</button>
+                </section>
+                <section id="departments-programs" class="departments sect">
+                    <h2>Departments & Programs at CBIT</h2>
+                    <p>CBIT is known as a premier engineering, science and technology institute in Telangana. Currently, it offers an opportunity to learn in 20 varied departments and pursue 10 programs.This university has strived and evolved over years to offer the students finest of its facilities for multi-dimensional growth. It is a home for design, management school and several emerging centres in technical, non-technical & entrepreneurial sector.</p>
+                    <button class="btn btn-primary">Know more</button>
+                </section>
+            </main>
+            <section id="placement-reports" class="placement col-4">
+                <h2><p>Placement Reports</p></h2>
+                <ul class="place-pdf">
+                    <li class="broch">
+                        <i class="fa-solid fa-book-open"></i>
+                        <a class="broch-p" href="#"><p>Placement Brochure 2024</p></a>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </li>
+                    <li class="broch">
+                        <i class="fa-solid fa-file"></i>
+                        <a class="broch-p" href="#"><p>Placement Report 2022-23</p></a>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </li>
+                    <li class="broch">
+                        <i class="fa-solid fa-file"></i>
+                        <a class="broch-p" href="#"><p>Placement Report 2021-22</p></a>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </li>
+                    <li class="broch">
+                        <i class="fa-solid fa-file"></i>
+                        <a class="broch-p" href="#"><p>Placement Report 2020-21</p></a>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <section id="director" class="container-fluid p-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/prince.jpg" class="pri-pic" alt="director" width="366" height="335">
+                </div>
+                <div class="col-md-6">
+                    <small class="msg-h">PRINCIPAL’S MESSAGE</small>
+                    <blockquote class="msg">I welcome you to Chaitanya Bharathi Institute of Technology (CBIT), one of the most prestigious institutes in India and pride of both Telugu States. CBIT was established in 1979 with a vision “To be the Centre of Excellence in Technical Education and Research” by a group of great visionaries. It is an Autonomous Institution accredited 4 times by NBA and 3 times by NAAC, with A++ grade in 2023.</blockquote>
+                    <h2>Prof. C. V. NARASIMHULU</h2>
+                    <p>K. N. Bajaj Chair</p>
+                </div>
+            </div>
+        </section>
+        <%- include("partials/footer") -%>  
+    </body>
+    </html>

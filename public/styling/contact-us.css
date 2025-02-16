@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(to left, rgb(5, 15, 40) 60%, rgb(5, 42, 86), rgb(7, 51, 105));
+    align-items: center;
+}
+
+.container {
+    width: 100%; /* Set container width to 100% for responsiveness */
+    max-width: 800px; /* Limit the maximum width to avoid stretching content on large screens */
+    padding: 20px 30px 20px 30px;
+    border-radius: 10px;
+    box-shadow: rgba(186, 120, 62, 0.413) 0px 5px 15px;
+    background-color: rgb(52, 93, 140);
+    margin-top: 50px; /* Add margin to the top for better spacing */
+    margin-bottom: 50px; /* Add margin to the bottom for better spacing */
+
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.col-lg-6 {
+    
+    padding: 20px;
+    background: linear-gradient(to left,rgb(82, 92, 120),rgb(61, 85, 124) ) !important;
+}
+
+.col-lg-6:first-child {
+    margin-bottom: 0;
+
+}
+.mb-3 label, h4, p{
+    color: white;
+}
+
+.form-label {
+    font-size: 18px;
+}
+
+.mb-3 .form-control {
+    min-height: 52px;
+    background-color:white;
+    color: black;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+}
+
+.bi {
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.d-flex p {
+    font-size: 18px;
+    padding-left: 18px;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: rgb(41, 143, 167);
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: white;
+    color: brown;
+    border: 2px solid brown;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 10px, rgba(0, 0, 0, 0.12) 0px -8px 20px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 8px 8px, rgba(0, 0, 0, 0.09) 0px -2px 2px;
+}
+.container-fluid{
+    max-width: 1300px;
+}
+.textwidget p{
+    color: black;
+}
+.col-lg-6 h4{
+    margin-bottom: 30px;
+}
+.d-flex > *{
+    margin-bottom: 50px;
+}

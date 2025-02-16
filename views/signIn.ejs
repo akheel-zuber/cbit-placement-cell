@@ -1,0 +1,109 @@
+<%- include("partials/header") -%>
+    <title>log in</title>
+    <link rel="stylesheet" href="styling/lg2.css" />
+  </head>
+  <body
+  >
+
+
+      <div class="big_card">
+        <center>
+            <div class="logos">
+                <img
+                  src="./images/cbit-logo.png"
+                  style="height: 120px; width: 100px"
+                  alt=""
+                />
+            </div>
+        </center>
+        <form action="/signin" method="POST">
+          <div class="forms_up" style="margin-top: 2rem">
+            <div style="display: flex; align-items: center">
+                <i class="fa-solid fa-user" style="padding-bottom: 2px"></i
+                >&nbsp;&nbsp;
+                <label for="name" class="form-label" style="margin-right: 30px;margin-top: 5px;"
+                  >Name:</label
+                >&nbsp;
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="form-control form-control_s"
+                  required
+                  placeholder="Enter Your Name"
+                />
+              </div>
+              <div style="display: flex;margin-top: 1rem; align-items: center">
+                <i class="fa-solid fa-id-card" style="padding-bottom: 2px"></i
+                >&nbsp;&nbsp;
+                <label for="roll" class="form-label" style="margin-right: 10px;margin-top: 5px;"
+                  >Roll&nbsp;No.:</label
+                >&nbsp;
+                <input
+                  type="text"
+                  name="roll"
+                  id="roll"
+                  class="form-control form-control_s"
+                  required
+                  placeholder="Enter Your Roll Number"
+                />
+              </div>
+              <div style="display: flex;margin-top: 1rem; align-items: center">
+                <i class="fa-solid fa-mobile" style="padding-bottom: 2px"></i
+                >&nbsp;&nbsp;
+                <label for="mobile" class="form-label" style="margin-right: 25px;margin-top: 5px;"
+                  >Mobile:</label
+                >
+                <input
+                  type="text"
+                  name="mobile"
+                  id="mobile"
+                  class="form-control form-control_s"
+                  required
+                  placeholder="Enter Your Mobile Number"
+                />
+              </div>
+            <div style="display: flex;margin-top: 1rem; align-items: center">
+              <i class="fa-solid fa-envelope" style="padding-bottom: 2px"></i
+              >&nbsp;&nbsp;
+              <label for="mail" class="form-label" style="margin-right: 30px;margin-top: 5px;"
+                >Email:</label
+              >&nbsp;
+              <input
+                type="email"
+                name="mail"
+                id="mail"
+                class="form-control form-control_s"
+                required
+                placeholder="Enter Your E-mail"
+              />
+            </div>
+            <div style="display: flex; margin-top: 1rem; align-items: center">
+              <i class="fa-solid fa-lock" style="padding-bottom: 2px"></i
+              >&nbsp;&nbsp;
+              <label for="password" class="form-label" style="margin-top: 5px;">Password: </label
+              >&nbsp;&nbsp;
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="form-control form-control_s"
+                required
+              />
+            </div>
+          </div>
+          <div class="submit-ip" style="margin-top: 2rem">
+            <button type="submit" class="btn btn-primary">
+              <strong>Sign In</strong>
+            </button>
+          </div>
+        </form>
+      </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

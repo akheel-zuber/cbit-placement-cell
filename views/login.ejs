@@ -1,0 +1,68 @@
+<%- include("partials/header") -%>
+    <title>log in</title>
+    <link rel="stylesheet" href="styling/lg2.css" />
+  </head>
+  <body
+  >
+
+
+      <div class="big_card">
+        <center>
+            <div class="logos">
+                <img
+                  src="./images/cbit-logo.png"
+                  style="height: 120px; width: 100px"
+                  alt=""
+                />
+            </div>
+        </center>
+        <form action="/login" method="POST">
+          <div class="forms_up" style="margin-top: 2rem">
+            <div style="display: flex; align-items: center">
+              <i class="fa-solid fa-envelope" style="padding-bottom: 2px"></i
+              >&nbsp;&nbsp;
+              <label for="mail" class="form-label" style="margin-right: 30px;margin-top: 5px;"
+                >Email:</label
+              >&nbsp;
+              <input
+                type="email"
+                name="mail"
+                id="mail"
+                class="form-control form-control_s"
+                required
+                placeholder="Enter Your E-mail"
+              />
+            </div>
+            <div style="display: flex; margin-top: 1rem; align-items: center">
+              <i class="fa-solid fa-lock" style="padding-bottom: 2px"></i
+              >&nbsp;&nbsp;
+              <label for="password" class="form-label" style="margin-top: 5px;">Password: </label
+              >&nbsp;&nbsp;
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="form-control form-control_s"
+                required
+              />
+            </div>
+          </div>
+          <div style="margin-top: 2rem;">
+
+            <center><div>Don't have an account <a style="background-color: rgb(196, 136, 252);border-radius: 15px;color: white; border-radius: 5px; text-decoration: none; padding: 5px;" href="/signin">Sign In</a></div></center>
+          </div>
+          <div class="submit-ip" style="margin-top: 2rem">
+            <button type="submit" class="btn btn-primary">
+              <strong>Log In</strong>
+            </button>
+          </div>
+        </form>
+      </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

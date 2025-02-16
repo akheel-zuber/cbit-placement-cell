@@ -1,0 +1,98 @@
+
+body{
+    background: linear-gradient(to left,rgb(5, 15, 40) 60%,rgb(5, 42, 86),rgb(7, 51, 105) ) !important;
+  align-items: center;
+    margin: revert;
+}
+html{
+    margin: revert;
+}
+
+/* :root{
+    --main-bg: #FEF5EF;
+    --main-color: '';
+} */
+
+.big_card{
+    /* position: absolute;
+    width: 500px;
+    height: 300px;
+    top: 25%;
+    left: 30%;
+    padding: 2rem 2rem 4rem 2rem;
+    border-radius: 2rem; */
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255, 0.178);
+    padding: 50px 60px 70px;
+    text-align: center;
+    border-radius: 30px;
+    background: transparent; 
+    color: white;
+    z-index: 1;
+}
+.big_card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.178); 
+    backdrop-filter: blur(5px); 
+    border-radius: 30px; 
+    border: 1px solid rgba(255, 255, 255, 0.5); 
+    z-index: -1; 
+}
+.big_card::before {
+    backdrop-filter: none;
+}
+
+@media (min-width: 768px) {
+    .big_card::before {
+        backdrop-filter: blur(5px);
+    }
+}
+.logos{
+    background-color: white;
+    border-radius: 15px;
+    
+    padding: 20px 0px 20px 0px;
+    opacity: 0.95;
+}
+.btn{
+    background: linear-gradient(125deg, rgb(1, 136, 250) 60%, rgb(1, 197, 250) 95% , rgb(108, 213, 255) 98% );
+    border: none;
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.btn:hover{
+    background: linear-gradient(125deg, rgb(0, 109, 199) 60%, rgb(1, 155, 197) 95% , rgba(13, 172, 245, 0.089) 98% );
+    border: none;
+}
+.form-control_s:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+    /* border: #E4BB97; */
+    background: rgba(255, 255, 255, 0.178); 
+    backdrop-filter: blur(5px); 
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    opacity: 0.5;
+}
+.form-control_s{
+    /* border: 1px solid #E4BB97; */
+    background: rgba(255, 255, 255, 0.178); 
+    backdrop-filter: blur(5px); 
+    border: 1px solid rgba(255, 255, 255, 0.5); 
+    color: white;
+    opacity: 0.5;
+}
+.form-control_s::placeholder{
+    color: aliceblue;
+    opacity: 0.5;
+}

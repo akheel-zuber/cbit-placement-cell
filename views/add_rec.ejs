@@ -1,0 +1,44 @@
+<%- include("partials/header") -%>
+    <title>Adding Recruitment</title>
+    <link rel="stylesheet" href="styling/oppr_add.css" />
+  </head>
+  <body
+  >
+
+<a href="/placement_drive"><button class="btn btn-primary">Go Back</button></a>
+      <div class="big_card">
+        
+        <form action="/adding_rec" method="POST">
+          <div class="forms_up" style="margin-top: 5rem">
+           <label for="companyname" class="form-label">Company Name:</label>
+           <input type="text" name="companyname" id="companyname" class="form-control form-control_s" required>
+           <label for="companydomain" class="form-label">Company Domain: </label>
+           <input type="text" name="companydomain" id="companydomain" class="form-control form-control_s" required>
+            <label for="role" class="form-label">Role: </label>
+            <input type="text" name="role" id="role" class="form-control form-control_s" required>
+            
+            <label for="section"> <strong>Enter the section</strong></label><br><br>
+            <input type="radio" name="section" value="cse-1" > <strong>&nbsp;&nbsp;CSE-1</strong>  <br><br>
+            <input type="radio" name="section" value="cse-2" ><strong>&nbsp;&nbsp;CSE-2 </strong> <br><br>
+            <input type="radio" name="section" value="cse-3" ><strong>&nbsp;&nbsp;CSE-3 </strong> <br><br>
+            <label for="year">Year</label>
+            <input type="text" name="year" id="year" class="form-control form-control_s" required>
+            <label for="jobtype" class="form-label">Job Type: </label>
+            <input type="text" name="jobtype" id="jobtype" class="form-control form-control_s" required>
+          </div>
+          
+          <div class="submit-ip" style="margin-top: 2rem">
+            <button type="submit" class="btn btn-primary">
+              <strong>Add Recruitment</strong>
+            </button>
+          </div>
+        </form>
+      </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

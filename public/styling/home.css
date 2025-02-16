@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to left bottom,
+    #1a4c88,
+    #174074,
+    #143461,
+    #10294f,
+    #0b1e3d,
+    #091c3a,
+    #081936,
+    #061733,
+    #071c3c,
+    #072146,
+    #072750,
+    #062c5a
+  );
+  background-color: #fef5ef;
+  overflow-x: hidden;
+  color: white;
+  padding: 0;
+}
+
+/* <----------------------------------          NAVBAR  STARTS             --------------------------> */
+.navfill {
+  /* position: relative; */
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 150px;
+  backdrop-filter: blur(10px);
+  background-color: #4675c061;
+  /* background-color: #d6e3f8; */
+  width: 100%;
+}
+
+.header {
+  /* background-color: #D6E3F8; */
+  backdrop-filter: blur(12px);
+  background-color: #061733b9;
+  /* background-color: #4675c061; */
+  position: relative;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-items: center;
+  z-index: 10;
+}
+
+.h_logo {
+  background-color: #fef5ef;
+  margin-left: 50px;
+  padding: 5px 0px;
+  z-index: 15;
+  transition: all 0.55s ease;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  border-radius: 100px;
+}
+
+.h_logo_img {
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  object-position: center; /* Adjust as needed */
+}
+
+.nav-links {
+  display: flex;
+  margin-right: 20px;
+  padding: 20px 0px;
+  border-radius: 90px;
+  z-index: 15;
+}
+
+.nav-links a {
+  /* color:#584B53; */
+  color: #f5c338;
+  margin: 0px 40px;
+  /* padding: 20px 20px; */
+  transition: all 0.55s ease;
+  /* border-radius: 90px; */
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  /* transition: all .55s ease; */
+  z-index: 16;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  transition: all 0.55s ease;
+  /* border-bottom: 2px solid #9d5c63; */
+  border-bottom: 2px solid #f5c338;
+  /* background-color: #b9d4ff; */
+}
+
+.ham-menu {
+  margin-right: 50px;
+  z-index: 15;
+  padding: 15px;
+  background-color: #456eae;
+  border-radius: 100px;
+  display: none;
+}
+
+#check-sidebar {
+  display: none;
+}
+
+.ham-menu img {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  z-index: 16;
+}
+
+/* <----------------------------------          NAVBAR  ENDS             --------------------------> */
+/* <----------------------------------          HOME - CONTENT  STARTS             --------------------------> */
+.home-content {
+  margin: 0.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.spl-wel {
+  font-size: 35px;
+  padding-top: 28px;
+  text-align: right;
+}
+.spl-wel-cbit {
+  padding: 0px 0px 0px 0px;
+  font-size: 110px;
+}
+.ArtTitle {
+  width: 100%;
+  margin: 30px 0px;
+  font-size: 30px;
+  font-weight: 800;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  text-align: left;
+  overflow: hidden;
+}
+.slide-own {
+  padding: 10px;
+  color: #f5c338;
+  margin-left: 5px;
+  box-sizing: border-box;
+  animation: slide-own linear 9s infinite;
+  margin-right: 0px;
+}
+
+@keyframes slide-own {
+  0% {
+    margin-top: 130px;
+  }
+
+  5% {
+    margin-top: 90px;
+  }
+
+  30% {
+    margin-top: 90px;
+  }
+
+  35% {
+    margin-top: 0px;
+  }
+
+  60% {
+    margin-top: 0px;
+  }
+
+  65% {
+    margin-top: -90px;
+  }
+
+  96% {
+    margin-top: -90px;
+  }
+
+  100% {
+    margin-top: -180px;
+  }
+}
+
+/* <----------------------------------          HOME - CONTENT  ENDS             --------------------------> */
+
+@media (max-width: 1250px) {
+  .nav-links a {
+    margin: 0px 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .nav-links a {
+    margin: 0px 15px;
+  }
+
+  .h_logo {
+    margin-left: 25px;
+  }
+
+  .nav-links {
+    margin-right: 25px;
+  }
+}
+
+@media (max-width: 840px) {
+  *{
+    transition: all 0.55s ease;
+  }
+  .nav-links a {
+    all: unset;
+    color: #f5c338;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all 0.55s ease;
+  }
+
+  .nav-links {
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    border-radius: 0;
+    margin: 0px;
+    z-index: 15;
+    color: #f5c338;
+    /* background-color: #d6e3f89e; */
+    background-color: #061733ed;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(86, 149, 251, 0.212);
+    /* display: none; */
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links li {
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+  }
+
+  .nav-links label {
+    margin-left: 185px;
+    background-color: #456eae;
+  }
+
+  .ham-menu {
+    display: block;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  #check-sidebar:checked ~ .nav-links {
+    display: flex;
+    right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  *{
+    transition: all 0.55s ease;
+  }
+  .nav-links a {
+    all: unset;
+    color: #f5c338;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all 0.55s ease;
+  }
+
+  .nav-links {
+    padding-top: 40px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    margin: 0px;
+    z-index: 15;
+    color: #f5c338;
+    background-color: #061733;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(86, 149, 251, 0.212);
+    /* display: none; */
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  .nav-links li {
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+  }
+
+  .nav-links label {
+    margin-left: 50px;
+    background-color: #456eae;
+  }
+
+  .ham-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  #check-sidebar:checked ~ .nav-links {
+    /* display: flex; */
+    right: 0;
+  }
+}
+footer{
+  margin-bottom: 0;
+  padding-bottom: 0;
+  position: absolute;
+}/* CSS for the slideshow container and images */
+.slideshow-container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 100%; /* Adjust width as needed */
+  overflow: hidden;
+}
+
+.slide-image {
+  width: 100%; /* Set image width to fill the container */
+  height: auto; /* Maintain aspect ratio */
+  position: relative;
+  top: 0;
+  left: 0; /* Initially position images outside the container */
+  transition: left 1s ease-in-out; /* Add smooth transition for animation */
+}
+        /* Additional CSS styles */
+        .home-content {
+          text-align: center; /* Center align content */
+          padding: 20px;
+      }
+      .ArtTitle {
+          margin-top: 20px;
+      }
+      .slide-image {
+          width: 100%;
+          height: auto;
+          transition: left 1s ease-in-out;
+      }
+      .slideshow-container-inner {
+          display: flex;
+          overflow: hidden;
+          width: 100%;
+          margin-bottom: 20px;
+      }
+      .slide-image {
+          flex: 0 0 100%; /* Each image takes 100% width of the container */
+      }
+      #student-testi {
+          padding: 20px 0;
+          text-align: center;
+      }
+
+    

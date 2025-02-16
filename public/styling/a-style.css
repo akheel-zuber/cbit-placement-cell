@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto','Arial';
+}
+.container h1{
+    color: white;
+}
+body{
+    background: linear-gradient(to left,rgb(8, 25, 68) 60%,rgb(5, 42, 86),rgb(7, 51, 105) ) !important;
+    align-items: center;
+}
+.card{
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: linear-gradient(to left,rgb(82, 92, 120),rgb(61, 85, 124) ) !important;
+    color: white;
+
+}
+.card h5{
+    font-weight: 650;
+
+}
+.card-img-top{
+   /*  width: 114.4px;
+    height: 64px; */
+    max-height: 8rem;
+    max-width: 7rem;
+    object-fit: cover;
+    object-position: center;
+}
+.card_img_div{
+    background-color: white;
+    border-radius: 15px;
+    /* margin: 20px 20px 20px 20px; */
+    opacity: 0.95;
+    height: 8rem;
+    width: 10rem;
+}
+.card_img_div {
+    display: flex;          /* Makes this a flex container */
+    justify-content: center;/* Centers content horizontally */
+    align-items: center;    /* Centers content vertically */
+ /*    height: 100%;  */          /* Optional: Set a specific height or make it full height */
+}
+
+
+.btn-primary{
+    padding: 7px 11px 13px 11px;
+    font-size: 18x;
+    border-radius: 15px;
+    background-color: rgb(20, 102, 141);
+}
+.btn-primary:hover{
+    font-weight: bold;
+    background-color: white;
+    color: #0d6efd;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#amazon-pic{
+    background-color: white;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+    .container {
+        padding: 10px 0;
+    }
+
+    .card {
+        margin-bottom: 20px;
+        padding:10px 0;
+    }
+
+    .card-img-top {
+        max-height: 6rem; /* Adjust as needed */
+        max-width: 6rem; /* Adjust as needed */
+    }
+
+    .card_img_div {
+        height: 7rem; /* Adjust as needed */
+        width: 7em; /* Adjust as needed */
+    }
+}
+@media screen and (min-width: 400px) and (max-width: 767px) {
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-img-top {
+        max-height: 7rem;
+        max-width: 8rem;
+        }
+
+    .card_img_div {
+        height: 9rem;
+        width: 10rem;
+        }
+
+}
+
+@media screen and (max-width: 400px) {
+    .card-img-top {
+        max-height: 6rem; /* Adjust as needed */
+        max-width: 6rem; /* Adjust as needed */
+    }
+
+    .card_img_div {
+        height: 7rem; /* Adjust as needed */
+        width: 7em; /* Adjust as needed */
+    }
+}
